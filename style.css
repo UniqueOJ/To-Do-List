@@ -48,6 +48,10 @@ input{
     transition: border-color 0.2s;
 }
 
+/* div#header div#input-container input#todo-input::placeholder{
+color: transparent;
+} */
+
 #header #input-container label{
     position: absolute;
     top: 0;
@@ -59,13 +63,28 @@ input{
     font-weight: 600;
 }
 
-#todo-add-btn{
+div#header div#input-container input#todo-input:placeholder-shown ~ label{
+top: 45px;
+color: white;
+font-size: 30px;
+font-weight: 100;
+}
+
+div#header div#input-container input#todo-input:focus ~ label{
+    top: 0;
+    font-size: 16px;
+    color: #845ec2;
+    font-weight: 600;
+}
+
+div#header button#todo-add-btn{
     width: 100px;
     height: 40px;
-    margin-left: 40%;
     border-radius: 20px;
     border: none;
-    color: white;
-    background-color: rgb(156, 13, 156);
+    font-size: 25px;
+    color: rgb(221, 221, 221);
+    background-color: #845ec2;
     font-size: 20px;
+    cursor: pointer;
 }
